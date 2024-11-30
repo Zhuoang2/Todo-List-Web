@@ -59,19 +59,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Container maxWidth="sm">
         <Box mt={5}>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={darkMode}
-                onChange={() => setDarkMode(!darkMode)}
-                color="primary"
-              />
-            }
-            label="Dark Mode"
-          />
-          <Header />
         <TodoInput addTask={addTask} />
         <TodoList
           tasks={tasks}

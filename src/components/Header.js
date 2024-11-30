@@ -1,11 +1,27 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
 
-const Header = () => (
-  <Typography variant="h3" component="h1" align="center" gutterBottom>
-    To-Do List
-  </Typography>
-);
+const Header = ({ darkMode, setDarkMode }) => {
+  return (
+    <AppBar position="static" color="primary">
+      <Toolbar>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          To-Do List
+        </Typography>
+        <IconButton
+          edge="end"
+          color="inherit"
+          onClick={() => setDarkMode(!darkMode)}
+          aria-label="toggle dark mode"
+        >
+          {darkMode ? <Brightness7 /> : <Brightness4 />}
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Header;
+
 
