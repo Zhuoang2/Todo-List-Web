@@ -58,18 +58,28 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Container maxWidth="sm">
-      <Box mt={5}>
-        <Header />
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Box mt={5}>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={darkMode}
+                onChange={() => setDarkMode(!darkMode)}
+                color="primary"
+              />
+            }
+            label="Dark Mode"
+          />
+          <Header />
         <TodoInput addTask={addTask} />
         <TodoList
           tasks={tasks}
           toggleComplete={toggleComplete}
           deleteTask={deleteTask}
         />
-      </Box>
-    </Container>
+        </Box>
+      </Container>
     </ThemeProvider>
   );
 }
