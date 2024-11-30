@@ -8,23 +8,23 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from '@mui/material/CssBaseline';
 import { Switch, FormControlLabel } from '@mui/material';
 
-const theme = createTheme({
-  typography: {
-    fontFamily: "'Roboto', sans-serif",
-  },
-  palette: {
-    primary: {
-      main: "#1976d2", // Blue
-    },
-    secondary: {
-      main: "#dc004e", // Pink
-    },
-  },
-});
+// const theme = createTheme({
+//   typography: {
+//     fontFamily: "'Roboto', sans-serif",
+//   },
+//   palette: {
+//     primary: {
+//       main: "#1976d2", // Blue
+//     },
+//     secondary: {
+//       main: "#dc004e", // Pink
+//     },
+//   },
+// });
 
 function App() {
   const [tasks, setTasks] = useState([]);
-  const [mode, setMode] = useState('light');
+  const [darkMode, setDarkMode] = useState(false);
 
   const addTask = (task) => {
     setTasks([...tasks, { id: Date.now(), text: task, completed: false }]);
@@ -38,19 +38,23 @@ function App() {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-  const theme = createTheme({
-    typography: {
-      fontFamily: "'Roboto', sans-serif",
-    },
-    palette: {
-      primary: {
-        main: "#1976d2", // Blue
-      },
-      secondary: {
-        main: "#dc004e", // Pink
-      },
-    },
-  });
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: darkMode ? "dark" : "light",
+          primary: {
+            main: "#1976d2",
+          },
+          // Optional: Customize secondary color
+          secondary: {
+            main: "#dc004e",
+          },
+        },
+        // Optional: Customize typography, spacing, etc.
+      }),
+    [darkMode]
+  );
 
   return (
     <ThemeProvider theme={theme}>
