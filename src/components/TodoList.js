@@ -1,8 +1,9 @@
 import React from "react";
+import { List } from "@mui/material";
 import TodoItem from "./TodoItem";
 
 const TodoList = ({ tasks, toggleComplete, deleteTask }) => (
-  <ul>
+  <List>
     {tasks.map((task) => (
       <TodoItem
         key={task.id}
@@ -11,7 +12,8 @@ const TodoList = ({ tasks, toggleComplete, deleteTask }) => (
         deleteTask={deleteTask}
       />
     ))}
-  </ul>
+  </List>
 );
 
 export default TodoList;
+
