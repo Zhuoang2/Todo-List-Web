@@ -4,10 +4,10 @@ A modern, high-end to-do list web application built with React and Material-UI (
 
 ## Table of Contents
 
-- [Features](#Features)
-- Demo
-- Prerequisites
-- Installation
+- [Features](#features)
+- [Demo](#demo)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - Usage
 - Project Structure
 - Technologies Used
