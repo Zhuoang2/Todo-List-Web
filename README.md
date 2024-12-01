@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# React To-Do List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, high-end to-do list web application built with React and Material-UI (MUI). This app features a sleek user interface, dark mode support, persistent data storage, and interactive sound effects upon task completion.
 
 ## Available Scripts
 
