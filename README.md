@@ -37,7 +37,7 @@ npm or yarn
 ## Installation
 
 Follow these steps to set up the project locally:
-# Clone the Repository
+### Clone the Repository
 
   ```
   git clone https://github.com/Zhuoang2/Todo-List-Web.git
