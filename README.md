@@ -32,6 +32,7 @@ Live Demo
 ## Prerequisites
 
 Node.js (version 12 or higher)
+
 npm or yarn
 
 ## Installation
