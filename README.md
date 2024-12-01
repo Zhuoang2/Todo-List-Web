@@ -34,6 +34,16 @@ Live Demo
 Node.js (version 12 or higher)
 npm or yarn
 
+## Installation
+
+Follow these steps to set up the project locally:
+# Clone the Repository
+
+  ```
+  git clone https://github.com/Zhuoang2/Todo-List-Web.git
+  cd Todo-List-Web
+  ```
+
 ## Available Scripts
 
 In the project directory, you can run:
