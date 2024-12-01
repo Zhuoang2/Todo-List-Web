@@ -15,6 +15,16 @@ A modern, high-end to-do list web application built with React and Material-UI (
 - License
 - Acknowledgements
 
+## Features
+
+- **High-End UI Design**: Polished and responsive design using Material-UI components.
+- **Dark Mode Support**: Toggle between light and dark themes with preferences saved across sessions.
+- **Persistent Data**: Tasks are saved in the browser's local storage to maintain state between sessions.
+- **Interactive Sound Effects**: Audio feedback when marking tasks as completed.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Task Management**: Add, complete, and delete tasks seamlessly.
+- **Animations**: Smooth transitions and animations using Framer Motion.
+
 ## Available Scripts
 
 In the project directory, you can run:
