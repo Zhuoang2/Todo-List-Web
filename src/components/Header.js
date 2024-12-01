@@ -15,7 +15,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           onClick={() => setDarkMode(!darkMode)}
           aria-label="toggle dark mode"
         >
-          {darkMode ? <Brightness7 /> : <Brightness4 />}
+          {darkMode ? <Brightness4 /> : <Brightness7 />}
         </IconButton>
       </Toolbar>
     </AppBar>
