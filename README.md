@@ -25,6 +25,10 @@ A modern, high-end to-do list web application built with React and Material-UI (
 - **Task Management**: Add, complete, and delete tasks seamlessly.
 - **Animations**: Smooth transitions and animations using Framer Motion.
 
+## Demo
+
+Live Demo
+
 ## Available Scripts
 
 In the project directory, you can run:
