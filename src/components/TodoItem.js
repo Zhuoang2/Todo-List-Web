@@ -1,29 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   ListItem,
   ListItemText,
   IconButton,
   Checkbox,
   ListItemSecondaryAction,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Button, // Imported here
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import successSound from "../assets/success.wav";
 
 const TodoItem = ({ task, toggleComplete, deleteTask }) => {
-  const [open, setOpen] = useState(false);
-
-  const handleDelete = () => {
-    deleteTask(task.id);
-    setOpen(false);
-  };
-
-  return (
-    <>
+    // Create a ref for the audio element
+    const audioRef = useRef(new Audio(successSound));
+  
+    // Use useEffect to detect changes in task.completed
+    useEffect(() => {
+      // If the task is completed, play the sound
+      if (task.completed) {
+        audioRef.current.play();
+      }
+    }, [task.completed]);
+  
+    return (
       <ListItem divider>
         <Checkbox
           edge="start"
@@ -37,31 +35,13 @@ const TodoItem = ({ task, toggleComplete, deleteTask }) => {
           }}
         />
         <ListItemSecondaryAction>
-          <IconButton edge="end" onClick={() => setOpen(true)}>
+          <IconButton edge="end" onClick={() => deleteTask(task.id)}>
             <DeleteIcon />
           </IconButton>
         </ListItemSecondaryAction>
       </ListItem>
-
-      {/* Confirmation Dialog */}
-      <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogTitle>{"Delete Task?"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Are you sure you want to delete this task?
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setOpen(false)} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleDelete} color="secondary" autoFocus>
-            Delete
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </>
-  );
-};
-
-export default TodoItem;
+    );
+  };
+  
+  export default TodoItem;
+  
