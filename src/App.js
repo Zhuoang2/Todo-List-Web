@@ -1,12 +1,15 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Container, Box } from "@mui/material";
 import Header from "./components/Header";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 // import "./App.css";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import CssBaseline from '@mui/material/CssBaseline';
-import { Switch, FormControlLabel } from '@mui/material';
+import {
+    createTheme,
+    ThemeProvider,
+    CssBaseline,
+    useMediaQuery,
+  } from "@mui/material";
 
 // const theme = createTheme({
 //   typography: {
@@ -23,38 +26,60 @@ import { Switch, FormControlLabel } from '@mui/material';
 // });
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
-
-  const addTask = (task) => {
-    setTasks([...tasks, { id: Date.now(), text: task, completed: false }]);
-  };
-
-  const toggleComplete = (id) => {
-    setTasks(tasks.map(task => task.id === id ? { ...task, completed: !task.completed } : task));
-  };
-
-  const deleteTask = (id) => {
-    setTasks(tasks.filter(task => task.id !== id));
-  };
-
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: darkMode ? "dark" : "light",
-          primary: {
-            main: "#1976d2",
+    const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+    const [darkMode, setDarkMode] = useState(() => {
+      const savedMode = localStorage.getItem("darkMode");
+      return savedMode !== null ? JSON.parse(savedMode) : prefersDarkMode;
+    });
+  
+    useEffect(() => {
+      localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    }, [darkMode]);
+  
+    const theme = useMemo(
+      () =>
+        createTheme({
+          palette: {
+            mode: darkMode ? "dark" : "light",
+            primary: {
+              main: darkMode ? "#90caf9" : "#1976d2",
+            },
           },
-          // Optional: Customize secondary color
-          secondary: {
-            main: "#dc004e",
-          },
-        },
-        // Optional: Customize typography, spacing, etc.
-      }),
-    [darkMode]
-  );
+        }),
+      [darkMode]
+    );
+  
+    // Initialize tasks from localStorage
+    const [tasks, setTasks] = useState(() => {
+      const savedTasks = localStorage.getItem("tasks");
+      return savedTasks ? JSON.parse(savedTasks) : [];
+    });
+  
+    // Update localStorage whenever tasks change
+    useEffect(() => {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
+  
+    const addTask = (task) => {
+      setTasks([
+        ...tasks,
+        { id: Date.now(), text: task, completed: false },
+      ]);
+    };
+  
+    const toggleComplete = (id) => {
+      setTasks(
+        tasks.map((task) =>
+          task.id === id
+            ? { ...task, completed: !task.completed }
+            : task
+        )
+      );
+    };
+  
+    const deleteTask = (id) => {
+      setTasks(tasks.filter((task) => task.id !== id));
+    };
 
   return (
     <ThemeProvider theme={theme}>
