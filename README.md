@@ -2,6 +2,19 @@
 
 A modern, high-end to-do list web application built with React and Material-UI (MUI). This app features a sleek user interface, dark mode support, persistent data storage, and interactive sound effects upon task completion.
 
+## Table of Contents
+
+- Features
+- Demo
+- Prerequisites
+- Installation
+- Usage
+- Project Structure
+- Technologies Used
+- Contributing
+- License
+- Acknowledgements
+
 ## Available Scripts
 
 In the project directory, you can run:
