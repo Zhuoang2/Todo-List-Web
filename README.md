@@ -29,6 +29,11 @@ A modern, high-end to-do list web application built with React and Material-UI (
 
 Live Demo
 
+## Prerequisites
+
+Node.js (version 12 or higher)
+npm or yarn
+
 ## Available Scripts
 
 In the project directory, you can run:
