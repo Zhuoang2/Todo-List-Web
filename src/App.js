@@ -3,7 +3,6 @@ import { Container, Box } from "@mui/material";
 import Header from "./components/Header";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
-// import "./App.css";
 import {
     createTheme,
     ThemeProvider,
