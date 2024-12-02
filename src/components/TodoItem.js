@@ -15,7 +15,6 @@ const TodoItem = ({ task, toggleComplete, deleteTask }) => {
   
     // Use useEffect to detect changes in task.completed
     useEffect(() => {
-      // If the task is completed, play the sound
       if (task.completed) {
         audioRef.current.currentTime = 0;
         audioRef.current.volume = 0.75;

@@ -10,6 +10,12 @@ import {
     useMediaQuery,
   } from "@mui/material";
 
+// Date
+import { LocalizationProvider, CalendarPicker } from '@mui/lab';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import { format } from 'date-fns';
+
+
 // const theme = createTheme({
 //   typography: {
 //     fontFamily: "'Roboto', sans-serif",
@@ -30,6 +36,7 @@ function App() {
       const savedMode = localStorage.getItem("darkMode");
       return savedMode !== null ? JSON.parse(savedMode) : prefersDarkMode;
     });
+    const [selectedDate, setSelectedDate] = useState(new Date());
   
     useEffect(() => {
       localStorage.setItem("darkMode", JSON.stringify(darkMode));
@@ -87,6 +94,15 @@ function App() {
       <CssBaseline />
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Container maxWidth="sm">
+        {/* <Box display="flex" justifyContent="center" my={2}>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <CalendarPicker
+            date={selectedDate}
+            onChange={(newDate) => setSelectedDate(newDate)}
+            />
+        </LocalizationProvider>
+        </Box> */}
+
         <Box mt={5}>
         <TodoInput addTask={addTask} />
         <TodoList
