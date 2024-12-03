@@ -67,6 +67,24 @@ Open your web browser and navigate to `http://localhost:3000` to view the applic
 - Use the dark mode toggle switch in the header to switch between light and dark themes.
 - Your preference is saved and will persist on subsequent visits.
 
+## Project Structure
+
+```
+src/
+├── assets/             # Sound files and other assets
+│   └── success.mp3
+├── components/         # React components
+│   ├── Header.js
+│   ├── TodoInput.js
+│   ├── TodoItem.js
+│   └── TodoList.js
+├── hooks/              # Custom hooks
+│   └── usePrevious.js
+├── App.js              # Main application component
+├── index.js            # Entry point
+└── App.css             # Global styles
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
