@@ -43,6 +43,14 @@ Follow these steps to set up the project locally:
   git clone https://github.com/Zhuoang2/Todo-List-Web.git
   cd Todo-List-Web
   ```
+### Install Dependencies
+Using npm: `npm install` Or using yarn: `yarn install`
+
+### Start the Development Server
+Using npm: `npm start` Or using yarn: `yarn start`
+
+### Open the Application
+Open your web browser and navigate to `http://localhost:3000` to view the application.
 
 ## Available Scripts
 
