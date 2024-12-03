@@ -89,19 +89,24 @@ function App() {
       setTasks(tasks.filter((task) => task.id !== id));
     };
 
+    const filteredTasks = tasks.filter(
+        (task) => task.date === format(selectedDate, 'yyyy-MM-dd')
+      );
+      
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Container maxWidth="sm">
-        {/* <Box display="flex" justifyContent="center" my={2}>
+        <Box display="flex" justifyContent="center" my={2}>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
             <CalendarPicker
             date={selectedDate}
             onChange={(newDate) => setSelectedDate(newDate)}
             />
         </LocalizationProvider>
-        </Box> */}
+        </Box>
 
         <Box mt={5}>
         <TodoInput addTask={addTask} />

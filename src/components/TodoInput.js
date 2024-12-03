@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { TextField, Button, Box } from "@mui/material";
 
-const TodoInput = ({ addTask }) => {
+// Date
+import { LocalizationProvider, DatePicker } from '@mui/lab';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+
+
+const TodoInput = ({ addTask, selectedDate }) => {
   const [task, setTask] = useState("");
+  const [taskDate, setTaskDate] = useState(selectedDate);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (task.trim()) {
-      addTask(task);
-      setTask("");
+      addTask(task, taskDate);
+      setTask('');
     }
-  };
+  };  
 
   return (
     <Box component="form" onSubmit={handleSubmit} display="flex" mb={2}>
