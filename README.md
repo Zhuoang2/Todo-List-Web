@@ -52,6 +52,21 @@ Using npm: `npm start` Or using yarn: `yarn start`
 ### Open the Application
 Open your web browser and navigate to `http://localhost:3000` to view the application.
 
+## Usage
+
+### Adding a Task
+- Enter a new task in the input field at the top.
+- Click the Add button or press Enter to add the task to your list.
+### Completing a Task
+- Click the checkbox next to a task to mark it as completed.
+- An audio sound will play to confirm completion.
+### Deleting a Task
+- Click the Delete icon next to a task to remove it.
+- A confirmation dialog will appear to prevent accidental deletions.
+### Dark Mode Toggle
+- Use the dark mode toggle switch in the header to switch between light and dark themes.
+- Your preference is saved and will persist on subsequent visits.
+
 ## Available Scripts
 
 In the project directory, you can run:
