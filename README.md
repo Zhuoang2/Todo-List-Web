@@ -69,7 +69,6 @@ Open your web browser and navigate to `http://localhost:3000` to view the applic
 
 ## Project Structure
 
-```
 src/
 ├── assets/             # Sound files and other assets
 │   └── success.mp3
@@ -83,7 +82,6 @@ src/
 ├── App.js              # Main application component
 ├── index.js            # Entry point
 └── App.css             # Global styles
-```
 
 ## Available Scripts
 
