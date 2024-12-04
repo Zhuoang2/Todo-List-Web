@@ -13,7 +13,6 @@ A modern, high-end to-do list web application built with React and Material-UI (
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## Features
 
@@ -88,39 +87,39 @@ src/
 ## Contributing
 Contributions are welcome! Please follow these steps:
 
-### Fork the Repository
+### 1. Fork the Repository
 
 Click the "Fork" button at the top right of the repository page.
 
-### Clone Your Fork
+### 2. Clone Your Fork
 
 ```
 git clone https://github.com/yourusername/your-forked-repo.git
 cd your-forked-repo
 ```
 
-### Create a New Branch
+### 3. Create a New Branch
 
 ```
 git checkout -b feature/your-feature-name
 ```
-### Make Your Changes
+### 4. Make Your Changes
 
 Implement your feature or bug fix.
 
-### Commit Your Changes
+### 5. Commit Your Changes
 
 ```
 git commit -m "Add your message here"
 ```
 
-### Push to Your Fork
+### 6. Push to Your Fork
 
 ```
 git push origin feature/your-feature-name
 ```
 
-### Submit a Pull Request
+### 7. Submit a Pull Request
 
 Go to the original repository and open a pull request with a clear description of your changes.
 
