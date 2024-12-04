@@ -93,4 +93,4 @@ src/
 - **localStorage**: Web API for persistent data storage in the browser.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Zhuoang2/Todo-List-Web/blob/main/LICENSE) file for details.
