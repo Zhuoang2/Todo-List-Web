@@ -85,6 +85,45 @@ src/
 └── App.css             # Global styles
 ```
 
+## Contributing
+Contributions are welcome! Please follow these steps:
+
+### Fork the Repository
+
+Click the "Fork" button at the top right of the repository page.
+
+### Clone Your Fork
+
+```
+git clone https://github.com/yourusername/your-forked-repo.git
+cd your-forked-repo
+```
+
+### Create a New Branch
+
+```
+git checkout -b feature/your-feature-name
+```
+### Make Your Changes
+
+Implement your feature or bug fix.
+
+### Commit Your Changes
+
+```
+git commit -m "Add your message here"
+```
+
+### Push to Your Fork
+
+```
+git push origin feature/your-feature-name
+```
+
+### Submit a Pull Request
+
+Go to the original repository and open a pull request with a clear description of your changes.
+
 ## Technologies Used
 - **React**: A JavaScript library for building user interfaces.
 - **Material-UI (MUI)**: React components for faster and easier web development.
