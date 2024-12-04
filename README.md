@@ -91,3 +91,6 @@ src/
 - **Framer Motion**: A production-ready motion library for React.
 - **use-sound**: A React hook for playing sound effects.
 - **localStorage**: Web API for persistent data storage in the browser.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
